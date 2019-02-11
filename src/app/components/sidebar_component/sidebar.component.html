@@ -1,0 +1,29 @@
+<nav>
+  <ul>
+    <li>
+      <a routerLink="posts" [class.activated]="currentUrl == '/posts'">
+        <i class="material-icons">tab</i>
+      </a>
+    </li>
+    <li >
+      <a routerLink="users" [class.activated]="currentUrl == '/login'">
+        <i class="material-icons">
+          message
+        </i>
+      </a>
+    </li>
+  </ul>
+
+    <ul class="my_profile_footer">
+      <li>
+        <button mat-icon-button (click)="postNew()"><mat-icon>add</mat-icon></button>
+      </li>
+      <li >
+        <a routerLink="myProfile" [class.activated]="currentUrl == '/myProfile'">
+          <i class="material-icons">
+            perm_identity
+          </i>
+        </a>
+      </li>
+    </ul>
+</nav>

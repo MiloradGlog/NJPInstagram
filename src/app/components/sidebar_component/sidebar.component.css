@@ -1,0 +1,29 @@
+nav {
+  background: #2D2E2E;
+  height: 100%;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+}
+nav ul li .activated {
+  background-color: #00a8ff;
+}
+nav button {
+  margin: 14px;
+  margin-bottom: 30px;
+}
+nav .my_profile_footer {
+  color: #fff;
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+/*# sourceMappingURL=sidebar.component.css.map */

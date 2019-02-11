@@ -18,7 +18,7 @@
  * BROWSER POLYFILLS
  */
 
-/** IE9, IE10, IE11, and Chrome <55 requires all of the following polyfills.
+/** IE9, IE10, IE11, and Chrome <55 requires all of the following_component polyfills.
  *  This also includes Android Emulators with older versions of Chrome and Google Search/Googlebot
  */
 
@@ -37,10 +37,10 @@
 // import 'core-js/es6/weak-map';
 // import 'core-js/es6/set';
 
-/** IE10 and IE11 requires the following for NgClass support on SVG elements */
+/** IE10 and IE11 requires the following_component for NgClass support on SVG elements */
 // import 'classlist.js';  // Run `npm install --save classlist.js`.
 
-/** IE10 and IE11 requires the following for the Reflect API. */
+/** IE10 and IE11 requires the following_component for the Reflect API. */
 // import 'core-js/es6/reflect';
 
 /**
@@ -52,23 +52,23 @@
 
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
- * user can disable parts of macroTask/DomEvents patch by setting following flags
+ * details_component can disable parts of macroTask/DomEvents patch by setting following_component flags
  * because those flags need to be set before `zone.js` being loaded, and webpack
- * will put import in the top of bundle, so user need to create a separate file
- * in this directory (for example: zone-flags.ts), and put the following flags
- * into that file, and then add the following code before importing zone.js.
+ * will put import in the top of bundle, so details_component need to create a separate file
+ * in this directory (for example: zone-flags.ts), and put the following_component flags
+ * into that file, and then add the following_component code before importing zone.js.
  * import './zone-flags.ts';
  *
  * The flags allowed in zone-flags.ts are listed here.
  *
- * The following flags will work for all browsers.
+ * The following_component flags will work for all browsers.
  *
  * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
  * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
  * (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
  *
  *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
- *  with the following flag, it will bypass `zone.js` patch for IE/Edge
+ *  with the following_component flag, it will bypass `zone.js` patch for IE/Edge
  *
  *  (window as any).__Zone_enable_cross_context_check = true;
  *

@@ -1,0 +1,29 @@
+<p>
+  register works!
+</p>
+<div class="container" >
+  <ul>
+    <li>
+      <mat-form-field>
+        <input #username matInput placeholder="username">
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <input #password matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <input #email matInput placeholder="email">
+      </mat-form-field>
+    </li>
+
+    <li>
+      <button mat-button (click)="register(username.value,password.value,email.value)">Register</button>
+    </li>
+  </ul>
+
+
+</div>

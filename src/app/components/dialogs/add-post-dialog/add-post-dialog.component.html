@@ -1,0 +1,13 @@
+<ul>
+  <li>
+      <input matInput [(ngModel)]="text" placeholder="unesi tekst">
+  </li>
+
+  <li>
+    <input matInput [(ngModel)]="imageURL" placeholder="unesi link">
+  </li>
+
+  <li>
+    <button mat-raised-button [mat-dialog-close]="true" (click)="addPost()">Ok</button>
+  </li>
+</ul>

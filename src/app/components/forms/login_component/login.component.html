@@ -1,0 +1,23 @@
+
+<div class="container" >
+  <ul>
+    <li>
+      <mat-form-field>
+        <input #usernameLogin matInput placeholder="username">
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <input #passwordLogin matInput placeholder="password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </li>
+
+    <li>
+      <button mat-button (click)="login(usernameLogin.value,passwordLogin.value)">Login</button>
+      <a routerLink="../register" >Don't have an account, Register here!</a>
+    </li>
+  </ul>
+
+
+</div>
