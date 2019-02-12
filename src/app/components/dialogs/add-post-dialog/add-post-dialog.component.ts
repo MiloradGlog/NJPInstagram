@@ -15,17 +15,24 @@ export class AddPostDialogComponent implements OnInit {
 
   text: string;
   imageURL: string;
+  selectedFile: File;
 
   constructor(public dialogRef: MatDialogRef<AddPostDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public dialogData: AddPostDialogData, private data: DataService) {}
 
 
   ngOnInit() {
+    this.selectedFile = null;
   }
 
   addPost(): void {
     this.data.addPost(this.text, this.imageURL, localStorage.getItem('user')).subscribe();
     close();
+  }
+
+  onFileSelected(event) {
+    this.selectedFile = event.target.files[0];
+    console.log("Selected file:" + this.selectedFile.name);
   }
 
   onNoClick(): void {

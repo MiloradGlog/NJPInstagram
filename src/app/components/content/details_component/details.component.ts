@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth_service/auth.service';
 import {Alert} from 'selenium-webdriver';
 import {FollowersComponent} from '../followers_component/followers.component';
+import {FollowersDialogComponent} from '../../dialogs/followers-dialog/followers-dialog.component';
 
 
 @Component({
@@ -41,9 +42,9 @@ export class DetailsComponent implements OnInit {
 
   displayFollowers(username): void {
     this.data.getFollowers(username).subscribe( data => {
-        const dialogRef = this.dialog.open(FollowersComponent, {
-          width: '250px',
-          data: {text: this.dialogText}
+        const dialogRef = this.dialog.open(FollowersDialogComponent, {
+          width: '450px',
+          height: '600px'
         });
 
         dialogRef.afterClosed().subscribe(result => {

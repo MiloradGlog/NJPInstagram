@@ -21,6 +21,7 @@ import { RegisterComponent } from './components/forms/register_component/registe
 import { LoginComponent } from './components/forms/login_component/login.component';
 import { FollowersComponent } from './components/content/followers_component/followers.component';
 import { FollowingComponent } from './components/content/following_component/following.component';
+import { FollowersDialogComponent } from './components/dialogs/followers-dialog/followers-dialog.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FollowingComponent } from './components/content/following_component/fol
     RegisterComponent,
     LoginComponent,
     FollowersComponent,
-    FollowingComponent
+    FollowingComponent,
+    FollowersDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,6 @@ import { FollowingComponent } from './components/content/following_component/fol
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [UsersDialogComponent, AddPostDialogComponent]
+  entryComponents: [UsersDialogComponent, AddPostDialogComponent, FollowersDialogComponent]
 })
 export class AppModule { }

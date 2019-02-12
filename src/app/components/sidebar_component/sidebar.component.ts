@@ -34,7 +34,8 @@ export class SidebarComponent implements OnInit {
     }
 
     const dialogRef = this.dialog.open(AddPostDialogComponent, {
-      width: '250px'
+      width: '450px',
+      height: '600px'
     });
 
     dialogRef.afterClosed().subscribe(result => {

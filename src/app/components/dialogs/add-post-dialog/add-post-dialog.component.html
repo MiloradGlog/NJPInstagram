@@ -8,6 +8,10 @@
   </li>
 
   <li>
+    <input type="file" (change)="onFileSelected($event)">
+  </li>
+
+  <li>
     <button mat-raised-button [mat-dialog-close]="true" (click)="addPost()">Ok</button>
   </li>
 </ul>
