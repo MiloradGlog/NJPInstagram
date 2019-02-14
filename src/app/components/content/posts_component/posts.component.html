@@ -2,11 +2,15 @@
 
 <ul [@listStagger]="posts$">
   <li *ngFor="let post of posts$">
-    <a routerLink="/details/{{post.user.username}}">{{post.user.username}}</a>
 
     <ul>
+      <li>
+        <a routerLink="/details/{{post.user.username}}">{{post.user.username}}</a>
+      </li>
       <li>{{post.text}}</li>
-      <li>{{post.imageURL}}</li>
+      <li>
+        <img [src]="post.imageURL" style="max-width:600px;max-height:600px"/>
+      </li>
     </ul>
   </li>
 

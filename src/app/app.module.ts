@@ -7,6 +7,8 @@ import {MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule, Ma
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
+
+
 import { AppComponent } from './app.component';
 
 import { UsersComponent } from './components/content/users_component/users.component';
@@ -22,6 +24,7 @@ import { LoginComponent } from './components/forms/login_component/login.compone
 import { FollowersComponent } from './components/content/followers_component/followers.component';
 import { FollowingComponent } from './components/content/following_component/following.component';
 import { FollowersDialogComponent } from './components/dialogs/followers-dialog/followers-dialog.component';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 
 @NgModule({
@@ -53,7 +56,8 @@ import { FollowersDialogComponent } from './components/dialogs/followers-dialog/
     MatInputModule,
     CommonModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent],

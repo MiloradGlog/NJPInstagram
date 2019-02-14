@@ -4,13 +4,27 @@
 
   <li>Username: {{user$.username}}</li>
   <li>Email: {{user$.email}}</li>
+  <li>
+    <button mat-button (click)="openDialog()">OpenDialog</button>
+    <button mat-button (click)="follow(user$.username)">Follow</button>
 
+    <button mat-button (click)="displayFollowers(user$.username)">Followers</button>
+
+    <button mat-button (click)="displayFollowing(user$.username)">Following</button>
+  </li>
+  <li>
+    <!--<img [src]= 'storyArray[0]'>-->
+    <slideshow [height]="'500px'"
+               [minHeight]="'525px'"
+               [autoPlay]="true"
+               [showArrows]="false"
+               [autoPlayInterval]="3000"
+               [imageUrls]="storyArray"
+               [lazyLoad]="storyArray?.length > 1"
+               [autoPlayWaitForLazyLoad]="true">
+    </slideshow>
+  </li>
 
 </ul>
 
-<button mat-button (click)="openDialog()">OpenDialog</button>
-<button mat-button (click)="follow(user$.username)">Follow</button>
 
-<button mat-button (click)="displayFollowers(user$.username)">Followers</button>
-
-<button mat-button (click)="displayFollowing(user$.username)">Following</button>

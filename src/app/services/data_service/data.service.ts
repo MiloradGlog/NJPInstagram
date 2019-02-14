@@ -40,11 +40,17 @@ export class DataService {
     return this.http.get('http://localhost:8080/users/followers?username=' + username, {headers});
   }
 
+  getStories(username) {
+    let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append('Authorization', localStorage.getItem('token'));
+    return this.http.get('http://localhost:8080/posts/getStories?username=' + username, {headers});
+  }
+
   addPost(txt, url, username) {
     let headers: HttpHeaders = new HttpHeaders();
 
     headers = headers.append('Authorization', localStorage.getItem('token'));
-    return this.http.post('http://localhost:8080/posts/add?username=' + username, {
+    return this.http.post('http://localhost:8080/posts/upload?username=' + username, {
       text: txt,
       imageURL: url
     }, {headers});

@@ -32,10 +32,31 @@ export class AddPostDialogComponent implements OnInit {
 
   onFileSelected(event) {
     this.selectedFile = event.target.files[0];
-    console.log("Selected file:" + this.selectedFile.name);
+    console.log('Selected file:' + this.selectedFile.name);
   }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+
+
+  // test
+  handleInputChange(e) {
+    const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    const pattern = /image-*/;
+    const reader = new FileReader();
+    if (!file.type.match(pattern)) {
+      alert('invalid format');
+      return;
+    }
+    reader.onload = this._handleReaderLoaded.bind(this);
+    reader.readAsDataURL(file);
+  }
+  _handleReaderLoaded(e) {
+    const reader = e.target;
+ //   this.preview = reader.result;
+    this.imageURL = reader.result;
+  }
+
 }

@@ -23,6 +23,14 @@ export class DetailsComponent implements OnInit {
   dialogText: string;
 
   user$: Object;
+  private stories = [
+    'assets/users/Mile/1550151199121.jpeg',
+    'assets/users/Mile/1550151912071.jpeg',
+    'assets/users/Mile/1550151931523.png',
+    'assets/users/Mile/1550152191236.png'
+  ];
+  private storyArray = [];
+
   constructor(private data: DataService,
               private route: ActivatedRoute,
               public dialog: MatDialog,
@@ -36,7 +44,17 @@ export class DetailsComponent implements OnInit {
       this.auth.redirectToLogin();
     }
     this.data.getUser(this.user$).subscribe(
-      data => this.user$ = data
+      data => {
+        this.user$ = data;
+
+        this.data.getStories((this.user$ as any).username).subscribe(
+          response => {
+            console.log(response);
+            // @ts-ignore
+            this.storyArray = response;
+          }
+        );
+      }
     );
   }
 

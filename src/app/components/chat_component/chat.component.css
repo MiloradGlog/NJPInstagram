@@ -1,3 +1,11 @@
+.chat {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: scroll;
+}
 
+#input {
+  margin-bottom: 16px;
+}
 
-/*# sourceMappingURL=chat_component.component.css.map */
+/*# sourceMappingURL=chat.component.css.map */
